@@ -34,7 +34,8 @@ class Volume(object):
 vol = Volume()
 
 # Turn on/off the ability to save images, or control Philips Hue/Sonos
-save_images, selected_gesture = False, 'peace'
+save_images = True
+selected_gesture = False, 'peace'
 smart_home = True
 
 # Philips Hue Settings
@@ -247,17 +248,17 @@ while camera.isOpened():
                 pass
 
         if save_images:
-            img_name = f"./frames/drawings/drawing_{selected_gesture}_{img_counter}.jpg".format(
+            img_name = f"./frames1/drawings/drawing_{selected_gesture}_{img_counter}.jpg".format(
                 img_counter)
             cv2.imwrite(img_name, drawing)
             print("{} written".format(img_name))
 
-            img_name2 = f"./frames/silhouettes/{selected_gesture}_{img_counter}.jpg".format(
+            img_name2 = f"./frames1/silhouettes/{selected_gesture}_{img_counter}.jpg".format(
                 img_counter)
             cv2.imwrite(img_name2, thresh)
             print("{} written".format(img_name2))
 
-            img_name3 = f"./frames/masks/mask_{selected_gesture}_{img_counter}.jpg".format(
+            img_name3 = f"./frames1/masks/mask_{selected_gesture}_{img_counter}.jpg".format(
                 img_counter)
             cv2.imwrite(img_name3, img)
             print("{} written".format(img_name3))
