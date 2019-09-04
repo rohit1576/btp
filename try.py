@@ -68,9 +68,9 @@ while camera.isOpened():
 
     cv2.imshow('ori', thresh)
 
-    img_name = "./dataset/peace/peace_{}.png".format(i)
-    cv2.imwrite(img_name, thresh)
-    print("{} written!".format(img_name))
+    # img_name = "./dataset/peace/peace_{}.png".format(i)
+    # cv2.imwrite(img_name, thresh)
+    # print("{} written!".format(img_name))
 
     i += 1
     # time.sleep(1)
