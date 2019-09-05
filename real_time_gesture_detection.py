@@ -252,13 +252,7 @@ while camera.isOpened():
         time.sleep(2)
         isBgCaptured = 1
         print('Background captured')
-        pygame.init()
-        pygame.mixer.init()
-        pygame.mixer.music.load('/home/rohit/Desktop/rain.mp3')
-        pygame.mixer.music.set_volume(vol.level)
-        pygame.mixer.music.play()
-        pygame.mixer.music.set_pos(50)
-        pygame.mixer.music.pause()
+    
 
     elif k == ord('r'):  # press 'r' to reset the background
         time.sleep(1)

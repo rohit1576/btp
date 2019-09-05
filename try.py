@@ -36,7 +36,7 @@ camera = cv2.VideoCapture(0) #uses webcam for video
 
 bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
 
-i = 0
+i = 280
 capture = False
 
 while camera.isOpened():
@@ -67,13 +67,13 @@ while camera.isOpened():
     ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
     cv2.imshow('ori', thresh)
-
-    # img_name = "./dataset/peace/peace_{}.png".format(i)
-    # cv2.imwrite(img_name, thresh)
-    # print("{} written!".format(img_name))
+    
+    img_name = "./dataset/volume_up/volume_up{}.png".format(i)
+    cv2.imwrite(img_name, thresh)
+    print("{} written!".format(img_name))
 
     i += 1
-    # time.sleep(1)
+    time.sleep(.05)
 
 camera.release()
 cv2.destroyAllWindows()
