@@ -36,7 +36,7 @@ camera = cv2.VideoCapture(0) #uses webcam for video
 
 bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
 
-i = 280
+i = -30
 capture = False
 
 while camera.isOpened():
@@ -68,7 +68,7 @@ while camera.isOpened():
 
     cv2.imshow('ori', thresh)
     
-    img_name = "./dataset/volume_up/volume_up{}.png".format(i)
+    img_name = "./dataset/weather/weather{}.png".format(i)
     cv2.imwrite(img_name, thresh)
     print("{} written!".format(img_name))
 
