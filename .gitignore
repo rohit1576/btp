@@ -6,6 +6,8 @@ __pycache__/
 # PyCharm files
 .DS_Store
 .idea/
+/dataset
+/dataset1
 
 # C extensions
 *.so

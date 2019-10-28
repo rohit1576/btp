@@ -1,5 +1,5 @@
 import os
-path = '/Users/kanishkverma/Desktop/btp/dataset/brightness_up'
+path = '/Users/kanishkverma/Desktop/btp/dataset/date'
 files = os.listdir(path)
 i = 0
 for file in files:
