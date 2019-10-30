@@ -3,18 +3,20 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import backend as K
+from sklearn import metrics
+
 import pickle
 import cv2
 
 # dimensions of our images.
-img_width, img_height = 150, 150
+img_width, img_height = 150 , 150
 
 train_data_dir = 'dataset1/test_set'
 validation_data_dir = 'dataset1/training_set'
-nb_train_samples = 200
+nb_train_samples = 400
 nb_validation_samples = 200
-epochs = 25
-batch_size = 25
+epochs = 30
+batch_size = 20
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -79,11 +81,6 @@ model.fit_generator(
                     validation_steps=nb_validation_samples // batch_size)
 
 model.save_weights('first_try.h5')
-
-
-#image = cv2.load('my_file.jpg')
-#print(model.predict(image))
-
 
 #// SAVING THE model
 filename = 'finalized_model.sav'
